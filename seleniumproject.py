@@ -25,4 +25,3 @@ subprocess.run(
         check=True
 )
 
- # manthan is gay nigga
