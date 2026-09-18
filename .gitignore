@@ -1,0 +1,7 @@
+voices/
+.venv/
+.idea/
+.directory
+__pycache__/
+*.wav
+.env
