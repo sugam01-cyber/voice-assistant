@@ -5,3 +5,6 @@ voices/
 __pycache__/
 *.wav
 .env
+main.py
+models.py
+database.py
