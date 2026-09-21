@@ -1,6 +1,7 @@
 import subprocess
 
 my_input=input("Enter anything you want to hear: ")
+new_vocals=f"Initiating {my_input}"
 subprocess.run(
     [
 
@@ -10,7 +11,7 @@ subprocess.run(
         "--output_file",
         "voice.wav"
     ],
-    input=my_input.encode()
+    input=new_vocals.encode()
 )
 
 subprocess.run(
@@ -25,3 +26,11 @@ subprocess.run(
         check=True
 )
 
+if my_input=="open firefox" :
+    subprocess.run(["firefox"],
+                   timeout=20
+    )
+
+# subprocess.run(["firefox"],
+#                  timeout=10
+#                  )
