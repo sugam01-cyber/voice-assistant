@@ -1,36 +1,23 @@
 import subprocess
-
-my_input=input("Enter anything you want to hear: ")
-new_vocals=f"Initiating {my_input}"
+import speech_recognition as sr
+user_voice=input("enter some texts: ")
+new_vocals=f"Initiating {user_voice}"
 subprocess.run(
     [
-
         "piper",
         "--model",
         "voices/en_US-lessac-medium.onnx",
         "--output_file",
-        "voice.wav"
+        "voicee.wav"
     ],
     input=new_vocals.encode()
 )
 
 subprocess.run(
     [
-
-            "ffplay",
-            "-nodisp",
-            "-autoexit",
-
-            "voice.wav"
-        ],
-        check=True
+        "ffplay",
+        "-autoexit",
+        "-nodisp",
+        "voicee.wav"
+    ],
 )
-
-if my_input=="open firefox" :
-    subprocess.run(["firefox"],
-                   timeout=20
-    )
-
-# subprocess.run(["firefox"],
-#                  timeout=10
-#                  )
